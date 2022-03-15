@@ -1,0 +1,222 @@
+<html>
+<head>
+	<title></title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/viewform.js"></script>
+	<style>
+        #sideNavBox,
+        #s4-titlerow,
+        #s4-ribbonrow,
+        ._3MiiOD-tEXtz29zSdBsiT,
+        ._1w0YJ8MbTODYnVLRQ-Wdsj {
+            display: none !important;
+        }
+
+        #btnUpdate {
+            min-width: 10em;
+            padding: 7px 10px;
+            border: 1px solid #a6a6a6;
+            background-color: #f8f8f8;
+            background-color: #f8f8f8;
+            margin-left: -120px;
+            font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+            font-size: 25px;
+            color: #333333;
+            margin-top: 15px;
+        }
+
+		body{
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			background-color: rgba(78, 126, 231, 0.473);
+			margin: 0;
+			
+		}
+		
+		h2{
+			background-color: rgb(34, 114, 139);
+			color: white;
+			padding: 10px;
+			text-align: center;
+		}
+		td{
+			padding: 7px;
+            font-size: 20px;
+            font-family: none;
+		}
+		input{
+			height: 30px;
+		
+			border: none;
+			
+		}
+		
+		input:focus{
+			outline: none;
+			border: 1px solid forestgreen;
+		}
+		/* input:hover{
+			box-shadow: 5px 5px 5px black;
+		} */
+		.center{
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+      
+	</style>
+</head>
+<body>
+    <div>
+        <img src="/sites/IntranetUAT/IntranetApp/NewDesign/icon/Logo.png" style="width:115px; margin-left: -200px;margin-right: 130px;">
+        <button id="editFunnel" onclick="redirectToEdit()" style="margin-left: 37em; margin-bottom: 25px; font-size: 20px; background: lightgrey;">Edit Funnel</button>
+        <button id="cancelFunnel" style="margin-bottom: 25px; font-size: 20px; background: lightgrey;"><a href="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/SitePages/Analytics_Funnel.aspx"> Cancel</a></button>
+    </div>
+	<table>
+		<div id="details" style="margin-left: -200px; margin-right: 1px;">
+		<h2 align="center"></h2>
+			<table width="100%" style="margin-left: -160px; width: 115%;">
+				<tr>
+					<td>S. No.</td> 
+					<td>
+						<input type="text" id="lblSno" size="25" >
+					</td>
+					<td>Country</td>
+					<td>
+						<input type="text" id="lblCountry" size="25" >
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Region</td>
+					<td>
+						<input type="text" id="lblRegion" size="25" >
+					</td>
+					<td>Vertical</td>
+					<td>
+						<input type="text" id="lblVertical" size="25" readonly>
+					</td>
+				</tr>
+                <tr>
+					<td>CRM ID</td>
+					<td>
+						<input type="text" id="lblCrmId" size="25" readonly>
+					</td>
+					<td>Customer Name</td>
+					<td>
+						<input type="text" id="lblCustomerName" size="25">
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Opportunity name</td>
+					<td>
+						<input type="text" id="lblOppName" size="25" readonly>
+					</td>
+					<td>Type</td>
+					<td>
+						<input type="text" id="lblType" size="25" readonly>
+					</td>
+				</tr>
+                <tr>
+					<td>Funnel</td>
+					<td>
+						<input type="text" id="lblFunnel" size="25" readonly>
+					</td>
+					<td>Status</br>
+                        (Active / Dormant)</td>
+					<td>
+						<input type="text" id="lblStatus" size="25">
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Engagement</br>
+                        (Reactive / Proactive)</td>
+					<td>
+						<input type="text" id="lblEngagement" size="25" readonly>
+					</td>
+					<td>Final OEM</td>
+					<td>
+						<input type="text" id="lblFinalOem" size="25" readonly>
+					</td>
+				</tr>
+                <tr>
+					<td>Remarks</td>
+					<td>
+						<input type="text" id="lblRemarks" size="25" readonly>
+					</td>
+					<td>Reason for losing or scraping</td>
+					<td>
+						<input type="text" id="lblReason" size="25">
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Sales / Account Manager</td>
+					<td>
+						<input type="text" id="lblSalesManager" size="25" readonly>
+					</td>
+					<td>Presales</td>
+					<td>
+						<input type="text" id="lblPresales" size="25" readonly>
+					</td>
+				</tr> <tr>
+					<td>Approx.</br>
+                        Value (in Cr)</td>
+					<td>
+						<input type="text" id="lblApproxValue" size="25" readonly>
+					</td>
+					<td>Start Date</td>
+					<td>
+						<input type="text" id="lblStartDate" size="25">
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Expected Closure</td>
+					<td>
+						<input type="text" id="lblExpectedClosure" size="25" readonly>
+					</td>
+					<td>PO Quarter</td>
+					<td>
+						<input type="text" id="lblPOQuarter" size="25" readonly>
+					</td>
+				</tr> <tr>
+					<td>Expected Billing Start Quarter</td>
+					<td>
+						<input type="text" id="lblExpectedBilling" size="25" readonly>
+					</td>
+					<td>Software Value</td>
+					<td>
+						<input type="text" id="lblSoftwareValue" size="25">
+					</td>
+                </tr>
+					
+				<tr>
+					<td>Services Value</td>
+					<td>
+						<input type="text" id="lblServiceValue" size="25" readonly>
+					</td>
+					<td>Current Year Billing software</td>
+					<td>
+						<input type="text" id="lblBillingSoftware" size="25" readonly>
+					</td>
+				</tr>
+
+                <tr>
+					<td>Current Year Billing Services</td>
+					<td>
+						<input type="text" id="lblBillingService"  size="25" readonly>
+					</td>
+					<td>Next Year</td>
+					<td>
+						<input type="text" id="lblNextYear" size="25" readonly>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</table>
+    <!-- <center class="center"><button id="btnUpdate">Update</button></center> -->
+
+</body>
+
+</html>

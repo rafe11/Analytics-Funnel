@@ -1,0 +1,333 @@
+ <!--git-->
+
+<html>
+
+<head>
+    <title></title>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
+    <script type="text/javascript" src="/_layouts/15/1033/strings.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clienttemplates.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clientforms.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clientpeoplepicker.js"></script>
+    <script type="text/javascript" src="/_layouts/15/autofill.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.core.js"></script> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/Ref/jquery-ui.min.css">
+    <script type="text/javascript" src="/teams/SPOSupportSite/CustomCode/jquery.min.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
+    <script type="text/javascript" src="/_layouts/15/1033/strings.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clienttemplates.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clientforms.js"></script>
+    <script type="text/javascript" src="/_layouts/15/clientpeoplepicker.js"></script>
+    <script type="text/javascript" src="/_layouts/15/autofill.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.core.js"></script>
+    <script type="text/javascript"
+        src="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/Ref/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/Ref/jquery-ui.js"></script>
+    <script type="text/javascript"
+        src="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/Ref/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/Style%20Library/AnalyticsCode/createfunnel.js"></script>
+    <style>
+        #sideNavBox,
+        #s4-titlerow,
+        #s4-ribbonrow,
+        ._3MiiOD-tEXtz29zSdBsiT,
+        ._1w0YJ8MbTODYnVLRQ-Wdsj {
+            display: none !important;
+        }
+
+        #btnInsert {
+            min-width: 10em;
+            padding: 7px 10px;
+            border: 1px solid #a6a6a6;
+            background-color: #f8f8f8;
+            background-color: #f8f8f8;
+            margin-left: -120px;
+            font-family: "Segoe UI", "Segoe", Tahoma, Helvetica, Arial, sans-serif;
+            font-size: 25px;
+            color: #333333;
+            margin-top: 15px;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgba(78, 126, 231, 0.473);
+            margin: 0;
+
+        }
+
+        h2 {
+            background-color: rgb(34, 114, 139);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td {
+            padding: 7px;
+            font-size: 20px;
+            font-family: none;
+        }
+
+        input {
+            height: 30px;
+
+            border: none;
+
+        }
+
+        input:focus {
+            outline: none;
+            border: 1px solid forestgreen;
+        }
+
+        /* input:hover{
+			box-shadow: 5px 5px 5px black;
+		} */
+        .center {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .sp-peoplepicker-initialHelpText {
+            top: 10px;
+            left: 4px;
+            position: absolute;
+            font-size: 14px;
+        }
+    </style>
+</head>
+ <h1>Starting with github</h1>
+<body>
+    <div>
+        <img src="/sites/IntranetUAT/IntranetApp/NewDesign/icon/Logo.png" style="width:115px; margin-left: -200px;">
+        <button id="cancelFunnel"
+            style="margin-left:50em;margin-bottom: 25px; font-size: 20px; background: lightgrey;"><a
+                href="https://inspiraeipl.sharepoint.com/sites/IntranetUAT/SitePages/Analytics_Funnel.aspx">
+                Cancel</a></button>
+    </div>
+    <table>
+        <div id="details" style="margin-left: -200px; margin-right: 1px;">
+            <h2 align="center"></h2>
+            <table style="margin-left: -160px; width: 115%;">
+                <tr>
+                    <div>
+                        <td>S. No.</td>
+                        <td>
+                            <input type="text" id="txtSno" size="25" autocomplete="off">
+                        </td>
+                        <td>Country</td>
+                        <td>
+                            <!-- <input type="text" id="txtCountry" size="25"> -->
+                            <select style="width: 304px; height: 35px;" id="txtCountry">
+                                <option></option>
+                                <option>Indonesia</option>
+                                <option>Philippines</option>
+                                <option>India</option>
+                                <option>Abu Dhabi</option>
+                                <option>Dubai</option>
+                                <option>MEA</option>
+                                <option>Singapore</option>
+                                <option>Ethiopia</option>
+                            </select>
+                        </td>
+                    </div>
+                </tr>
+
+                <tr>
+                    <td>Region</td>
+                    <td>
+                        <select id="txtRegion" style="width: 304px; height: 35px;">
+                            <option></option>
+                            <option>ASEAN</option>
+                            <option>EAST</option>
+                            <option>MEA</option>
+                            <option>WEST</option>
+                            <option>NORTH</option>
+                            <option>SOUTH</option>
+                        </select>
+                        <!-- <input type="text" id="txtRegion" size="25"> -->
+                    </td>
+                    <td>Vertical</td>
+                    <td>
+                        <!-- <input type="text" id="txtVertical" size="25"> -->
+                        <select id="txtVertical" style="width: 304px;height: 35px;">
+                            <option></option>
+                            <option>BFSI</option>
+                            <option>Enterprise</option>
+                            <option>Govt</option>
+                            <option>Manufacturing</option>
+                            <option>PSU</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CRM ID</td>
+                    <td>
+                        <input type="text" id="txtCrmId" size="25" autocomplete="off">
+                    </td>
+                    <td>Customer Name</td>
+                    <td>
+                        <input type="text" id="txtCustomerName" size="25" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Opportunity name</td>
+                    <td>
+                        <input type="text" id="txtOppName" size="25" autocomplete="off">
+                    </td>
+                    <td>Type</td>
+                    <td>
+                        <!-- <input type="text" id="txtType" size="25"> -->
+                        <select id="txtType" style="width: 304px;height: 35px;">
+                            <option></option>
+                            <option>Lost</option>
+                            <option>Lead</option>
+                            <option>Submitted</option>
+                            <option>Best Case</option>
+                            <option>Opportunity</option>
+                            <option>Dropped</option>
+                            <option>EOI Submitted</option>
+                            <option>ORC</option>
+                            <option>Retendered</option>
+                            <option>Routing</option>
+                            <option>Scrabbed</option>
+                            <option>Won</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Funnel</td>
+                    <td>
+                        <!-- <input type="text" id="txtFunnel" size="25"> -->
+                        <select id="txtFunnel" style="width: 304px;height: 35px;">
+                            <option></option>
+                            <option>Best Case</option>
+                            <option>Closed</option>
+                            <option>Commit</option>
+                            <option>Dropped</option>
+                            <option>Funnel</option>
+                            <option>Lost</option>
+                            <option>Scrapped</option>
+                        </select>
+                    </td>
+                    <td>Status</br>
+                        (Active/ Dormant)</td>
+                    <td>
+                        <!-- <input type="text" id="txtStatus" size="25"> -->
+                        <select id="txtStatus" style="width: 304px;height: 35px;">
+                            <option></option>
+                            <option>Active</option>
+                            <option>Closed</option>
+                            <option>Dormant</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Engagement</br>
+                        (Reactive/ Proactive)</td>
+                    <td>
+                        <!-- <input type="text" id="txtEngagement" size="25"> -->
+                        <select id="txtEngagement" style="width: 304px;height: 35px;">
+                            <option></option>
+                            <option>Dormant</option>
+                            <option>Proactive</option>
+                            <option>Reactive</option>
+                        </select>
+                    </td>
+                    <td>Final OEM</td>
+                    <td>
+                        <input type="text" id="txtFinalOem" size="25" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remarks</td>
+                    <td>
+                        <input type="text" id="txtRemarks" size="25" autocomplete="off">
+                    </td>
+                    <td>Reason for losing or scraping</td>
+                    <td>
+                        <input type="text" id="txtReason" size="25" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sales/ Account Manager</td>
+                    <td>
+                        <!-- <input type="text" id="txtSalesManager" size="25"> -->
+                        <div id="peoplePickerDiv"></div>
+                    </td>
+                    <td>Presales</td>
+                    <td>
+                        <input type="text" id="txtPresales" size="25" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Approx.</br>
+                        Value (in Cr)</td>
+                    <td>
+                        <input type="text" id="txtApproxValue" size="25" autocomplete="off">
+                    </td>
+                    <td>Start Date</td>
+                    <td>
+                        <input type="text" id="txtStartDate" size="25" style="width: 293px" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Expected Closure</td>
+                    <td>
+                        <input type="text" id="txtExpectedClosure" size="25" style="width: 293px" autocomplete="off">
+                    </td>
+                    <td>PO Quarter</td>
+                    <td>
+                        <input type="text" id="txtPOQuarter" size="25" style="width: 293px" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Expected Billing Start Quarter</td>
+                    <td>
+                        <input type="text" id="txtExpectedBilling" size="25" style="width: 293px" autocomplete="off">
+                    </td>
+                    <td>Software Value</td>
+                    <td>
+                        <input type="text" id="txtSoftwareValue" size="25" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Services Value</td>
+                    <td>
+                        <input type="text" id="txtServiceValue" size="25" autocomplete="off">
+                    </td>
+                    <td>Current Year Billing software</td>
+                    <td>
+                        <input type="text" id="txtBillingSoftware" size="25" autocomplete="off">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Current Year Billing Services</td>
+                    <td>
+                        <input type="text" id="txtBillingService" size="25" autocomplete="off">
+                    </td>
+                    <td>Next Year</td>
+                    <td>
+                        <input type="text" id="txtNextYear" size="25" autocomplete="off">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </table>
+    <center class="center"><button id="btnInsert">Save</button></center>
+
+</body>
+
+</html>
